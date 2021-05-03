@@ -1,1 +1,14 @@
 # HW-4
+Functional requirements:Write a JavaScript application that allows the user to enter one movie title along with a rating.The rating should be an integer from 1 to 5, with 5 being a good movie and 1 a bad movie.
+
+After the user enters the text for these 2 fields, they should click a button labeled “Add Movie”.(In the click method, the two text fields should be cleared so the user can add another movie.)
+
+When the user clicks that button,     if the title field is empty, or if the rating is not an integer between 1 and 5, a pop up (alert) should warn them that the data was not correct and no movie data should be saved for that movie.     
+
+Otherwise, if the movie information is valid, a new movie object should be created, and stored in an array. Use a Constructor Function to create the movie object.A second button on the screen, labeled “show movies” should result in all the movie titles, with their rating, being displayed in a list.Implementation requirements:In a separate JS file, movie.js, define a constructor function, Movie, which is used to define an object to hold the movie information.  
+
+The resulting objects should:Have a property to hold the movie title (this is set when the constructor is called)Have a property to hold the rating (this is set when the constructor is called)Have a method to validate if the two fields are valid. (the title field is not empty, and the rating is an integer between 1 and 5). It returns true or false, it does not use an Alert.Have a .GetAll() method that returns this objects title and rating as a single stringIn a separate JS file, main.js, write the code to handle the 2 button click events.  
+
+One event creates a new object, calls that object’s validate function, and if that returns true, it adds that movie object to the array.  (Using push to add the movie to the array is an easy way, you don’t have to keep track of array pointers.) If validate returns false, the object is not added to the array, and the code shows a pop-up telling the user the data was not good. (JS has automatic garbage collection, no need to try and delete this bad object.)The other button event cycles through each object in the array, and using each object’s .GetAll() method, it lists all the movies out to the HTML page.  (You can use simple string concatenation, or a <ul> that you add <li> to, or a table, .. whatever you like.
+  
+  When all this works, go back through this document carefully and mark off each required item to make sure you have implemented all the functionality mentioned anywhere in this doc. Zip your 4 files (you need a CSS file) and 1 partner should submit. (Notice you do not have to put your code in GitHub this week, but you can if you like.)Just for “fun” OR if you are on a 3 person team:Write out the movies sorted by ranking!
